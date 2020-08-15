@@ -20,3 +20,7 @@ code {
   color: red;
   font-weight: 600;
 }
+
+.center{
+  text-align: center;
+}

@@ -3,18 +3,36 @@ import Home from './Home';
 import About from './About'
 import Contact from './Contact';
 import NotFound from './NotFound';
+import {Jumbotron, Container, Navbar, Nav, NavItem } from 'react-bootstrap';
 import {BrowserRouter as Router, Route, Link, NavLink, Switch} from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
     <Router>
     <div className="App">
-      <h2>React-Router</h2>
+      <Container className="mt-4 p-3">
+        <Jumbotron>
+        <h1 className="center">Welcome to React-Router! 🎉 </h1>
+        </Jumbotron>
+      </Container>
+      
       
 
-      <NavLink exact activeClassName="active" to="/">Home</NavLink>
-      <NavLink activeClassName="active" to="/about">About</NavLink>
-      <NavLink activeClassName="active" to="/contact">Contact</NavLink>
+      <Navbar bg="info" variant="dark">
+        <Nav className="ml-auto">
+          <NavItem>
+            <NavLink className="nav-link" exact activeClassName="active" to="/">Home</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink className="nav-link" activeClassName="active" to="/about">About</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink className="nav-link" activeClassName="active" to="/contact">Contact</NavLink>
+          </NavItem>
+        </Nav>
+      </Navbar>
+  
 
       <Switch>
         <Route exact path="/" component={Home} />
