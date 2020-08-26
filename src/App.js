@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <Container className="mt-4 p-3">
         <Jumbotron>
-        <h1 className="center">Welcome to React-Router! 🎉 </h1>
+        <h1 className="center">Welcome to React-Router!</h1>
         </Jumbotron>
       </Container>
       
